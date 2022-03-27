@@ -14,6 +14,15 @@ input_b.pack()
 shape = tk.Entry(window)
 shape.pack() 
 
+sin_label = tk.Label(window,text='cos/sin/tan')
+sin_label.place(x=3,y=39)
+
+input_a_label = tk.Label(window,text='input A')
+input_a_label.place(x=10,y=1)
+
+input_b_label = tk.Label(window,text='Input B')
+input_b_label.place(x=10,y=20)
+
 def find_theta():
     get_shape = shape.get()
     get_a = int(input_a.get())
@@ -37,6 +46,7 @@ def find_theta():
         tan_angle = math.degrees(tan_theta)
         result_label2 = tk.Label(window, text=tan_angle)
         result_label2.pack()
+
 
 result_button = tk.Button(window, text='Calculate Angle (Theta)',command=find_theta)
 result_button.pack()
